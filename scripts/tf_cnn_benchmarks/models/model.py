@@ -245,7 +245,7 @@ class CNNModel(Model):
         mean=127,
         stddev=60,
         name=self.model_name + '_synthetic_inputs')
-    inputs = variables_module.VariableV1(
+    inputs = variables_module.Variable(
         inputs, trainable=False, collections=[tf.GraphKeys.LOCAL_VARIABLES],
         name=input_name)
     labels = tf.random_uniform(
